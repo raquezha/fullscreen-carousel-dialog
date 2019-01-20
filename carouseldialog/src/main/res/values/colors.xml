@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="ripple_dark">#33ffffff</color>
+    <color name="ripple_light">#1f000000</color>
+    <color name="dismiss_button">#ff4d34</color>
+    <color name="dismiss_button_text">@color/white</color>
+    <color name="orange_pink">#ff6550</color>
+    <color name="orange_red">#ff4d34</color>
+</resources>

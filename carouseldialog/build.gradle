@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
+apply plugin: 'com.novoda.bintray-release'
+
+apply from: '../dependencies.gradle'
+
+publish {
+
+    def groupProjectID = 'net.raquezha.carouseldialog'
+    def artifactProjectID = 'carouseldialog'
+    def publishVersionID = '1.0.0-rc1'
+
+    userOrg = 'raquezha'
+    repoName = 'fullscreen-carousel-dialog'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Android Library for showing fully customizable Carousel Dialog'
+    website = 'https://github.com/raquezha/fullscreen-carousel-dialog'
+
+}
+
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0-rc1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        disable 'TypographyFractions','TypographyQuotes'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api "com.yarolegovich:discrete-scrollview:$discreted_scrollview_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+    implementation "androidx.cardview:cardview:$cardview_version"
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    implementation "com.github.bumptech.glide:annotations:$glide_annotation_version"
+    implementation "com.github.bumptech.glide:okhttp3-integration:$glide_okhttp_integration_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test:runner:$runner_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
+}
+repositories {
+    mavenCentral()
+}

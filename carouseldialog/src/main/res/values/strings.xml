@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Fullscreen Carousel Dialog</string>
+    <string name="dialog_dismiss_button_text">CLOSE</string>
+</resources>
