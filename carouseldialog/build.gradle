@@ -12,7 +12,7 @@ publish {
 
     def groupProjectID = 'net.raquezha.carouseldialog'
     def artifactProjectID = 'carouseldialog'
-    def publishVersionID = '1.0.0-rc1'
+    def publishVersionID = '1.0.0-rc2'
 
     userOrg = 'raquezha'
     repoName = 'fullscreen-carousel-dialog'
@@ -31,7 +31,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0.0-rc1"
+        versionName "1.0.0-rc2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -67,3 +67,5 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+// gradle clean build bintrayUpload -PbintrayUser={userid_bintray} -PbintrayKey={apikey_bintray} -PdryRun=false

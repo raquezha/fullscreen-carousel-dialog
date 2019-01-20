@@ -1,1 +1,1 @@
-include ':carouseldialog'
+include ':carouseldialog', ':app'
