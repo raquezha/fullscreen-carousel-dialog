@@ -7,7 +7,7 @@
 ## Gradle
 ```groovy
 dependencies {
-  implementation 'net.raquezha.carouseldialog:carouseldialog:1.0.0-rc1'
+  implementation 'net.raquezha.carouseldialog:carouseldialog:1.0.0-rc2'
 }
 ```
 
