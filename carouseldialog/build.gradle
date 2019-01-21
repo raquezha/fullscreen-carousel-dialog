@@ -69,4 +69,4 @@ repositories {
     mavenCentral()
 }
 
-// gradle clean build bintrayUpload -PbintrayUser={userid_bintray} -PbintrayKey={apikey_bintray} -PdryRun=false
+// gradlew clean build bintrayUpload -PbintrayUser=raquezha -PbintrayKey={api_key} -PdryRun=false

@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import net.raquezha.carouseldialog.R
 import net.raquezha.carouseldialog.objects.CarouselData
 import android.content.Context
+import android.widget.Space
 import com.bumptech.glide.request.RequestOptions
 import net.raquezha.carouseldialog.ImageScaleType
 
@@ -45,8 +46,13 @@ class CarouselAdapter constructor(private var data: MutableList<CarouselData>) :
                 .load(data[position].imageUrl)
                 .into(holder.image)
 
-        holder.description.text = data[position].description
-        if(data[position].actionType <= 0) {
+        if (data[position].description?.isEmpty()!!) {
+            holder.description.visibility = View.GONE
+            holder.space .visibility = View.GONE
+        } else
+            holder.description.text = data[position].description
+
+        if (data[position].actionType <= 0) {
             holder.actionName.visibility = View.GONE
         } else {
             holder.actionName.text = data[position].actionName
@@ -74,6 +80,14 @@ class CarouselAdapter constructor(private var data: MutableList<CarouselData>) :
             }
 
         }
+
+        val height = data[position].imageHeight
+        val width = data[position].imageWidth
+
+        if (height != 0 && width != 0)
+            requestOptions.override(height, width).centerCrop()
+
+
         return requestOptions
     }
 
@@ -81,6 +95,7 @@ class CarouselAdapter constructor(private var data: MutableList<CarouselData>) :
         val image: AppCompatImageView = itemView.findViewById(R.id.ivImage)
         val description: AppCompatTextView = itemView.findViewById(R.id.tvDesription)
         val actionName: AppCompatTextView = itemView.findViewById(R.id.tvActionName)
+        val space: Space = itemView.findViewById(R.id.space)
     }
 
     interface OnActionClickListener {

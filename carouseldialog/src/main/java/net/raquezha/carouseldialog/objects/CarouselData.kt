@@ -12,6 +12,8 @@ class CarouselData() {
     var accountName: String? = null
     var imageScaleType = ImageScaleType.CENTER
     var actionType: Int = -1
+    var imageHeight = 0
+    var imageWidth = 0
 
     constructor(builder: Builder) : this() {
         this.placeHolderImageResId = builder.getPlaceHolderImageResId()
@@ -22,6 +24,8 @@ class CarouselData() {
         this.imageScaleType = builder.getImageScaleType()
         this.accountName = builder.getAccountName()
         this.placeHolderErrorImageResId = builder.getPlaceHolderErrorImageResId()
+        this.imageHeight = builder.getImageHeight()
+        this.imageWidth = builder.getImageWidth()
     }
 
     class Builder {
@@ -33,6 +37,8 @@ class CarouselData() {
         private var actionName: String? = null
         private var imageScaleType = ImageScaleType.CENTER
         private var cardName: String? = null
+        private var imageHeight = 0
+        private var imageWidth = 0
 
         fun build(): CarouselData {
             return CarouselData(this)
@@ -40,6 +46,16 @@ class CarouselData() {
 
         fun setCardName(cardName: String): Builder {
             this.cardName = cardName
+            return this
+        }
+
+        fun overrideImageDimension(size: Int): Builder {
+            return overrideImageDimension(size, size)
+        }
+
+        fun overrideImageDimension(height:Int, width: Int): Builder {
+            this.imageHeight = height
+            this.imageWidth = width
             return this
         }
 
@@ -104,6 +120,14 @@ class CarouselData() {
 
         fun getActionType(): Int {
             return actionType
+        }
+
+        fun getImageHeight(): Int {
+            return imageHeight
+        }
+
+        fun getImageWidth(): Int {
+            return imageWidth
         }
 
     }
