@@ -18,30 +18,30 @@ class MainActivity : AppCompatActivity() {
 
     private var carouselDialog: AlertDialog? = null
     private var dataList: MutableList<CarouselData> = mutableListOf()
-    private var buttonNames = arrayOf("Button 1", "Button 2", "")
+    private var buttonNames = arrayOf("Button 1", "Button 2", "", "")
     private var imageUrls = arrayOf("https://images.pexels.com/photos/1769329/pexels-photo-1769329.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             "https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-            "https://images.pexels.com/photos/1772724/pexels-photo-1772724.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+            "https://images.pexels.com/photos/1772724/pexels-photo-1772724.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "https://images.pexels.com/photos/1803913/pexels-photo-1803913.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+
     private var placeHolder = R.drawable.ic_placeholder
     private var placeHoldersError = R.drawable.ic_placeholder_error
-    private var cardNames = arrayOf("Card 1", "Card 2", "Card 3")
+    private var cardNames = arrayOf("Card 1", "Card 2", "Card 3", "Card 4")
     private var descriptions = arrayOf("Hello There! This is the description of the First Card, Button1. Have a great day folks!",
             "Announcement! Holiday is comming soon, buy now pay later! Come shop with us! Thank you! Image Scale Type is set to 'CENTER_INSIDE'",
-            "This is the card 3, hooray for today!")
+            "This is the card 3, hooray for today!", "")
     private var scaleTypes = arrayOf(ImageScaleType.CENTER, ImageScaleType.CENTER, ImageScaleType.CENTER)
-    private var cardSize = 3
+    private var cardSize = 4
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         dataList = generateCarouselData()
 
         btnShowDialog.setOnClickListener {
             showDialog()
         }
-
     }
 
     private fun generateCarouselData(): MutableList<CarouselData> {
@@ -53,7 +53,8 @@ class MainActivity : AppCompatActivity() {
                     .setPlaceHolderImageRes(placeHolder)
                     .setPlaceHolderErrorImageResId(placeHoldersError)
                     .setCardName(cardNames[i])
-                    .setImageScaleType(scaleTypes[i])
+                    //.setImageScaleType(scaleTypes[i])
+                    //.overrideImageDimension(300)
                     .build()
             )
         }
