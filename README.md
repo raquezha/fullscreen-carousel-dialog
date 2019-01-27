@@ -40,7 +40,7 @@ dependencies {
 
 2. create a carousel dialog:
 ```kotlin
-CarouselDialog.createCarouselDialog(context) {
+CarouselDialog.createCarouselDialog(context, dataList) {
 // customize your dialog here
 }
 ```
@@ -100,7 +100,7 @@ Written in Kotlin 1.3.11
 Thanks to [@yarolegovich]( https://github.com/yarolegovich )'s  [Discrete ScrollView]( https://github.com/yarolegovich/DiscreteScrollView ) Library 
   
 
-Thanks to [@Mohammed Audhil]( https://android.jlelse.eu/@audhilmohammed ) [Custom Alert Dialog Tutorial](  https://android.jlelse.eu/android-custom-alert-dialogs-kotlin-extension-functions-kotlin-higher-order-functions-life-682305c5322e )
+Thanks to [@Mohammed Audhil]( https://android.jlelse.eu/@audhilmohammed )'s [Custom Alert Dialog Tutorial](  https://android.jlelse.eu/android-custom-alert-dialogs-kotlin-extension-functions-kotlin-higher-order-functions-life-682305c5322e )
 
 ## License
 ```
