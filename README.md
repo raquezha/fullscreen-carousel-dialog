@@ -40,7 +40,9 @@ dependencies {
 
 2. create a carousel dialog:
 ```kotlin
-CarouselDialog.createCarouselDialog(context) { // customize your dialog here}
+CarouselDialog.createCarouselDialog(context) {
+// customize your dialog here
+}
 ```
 just wrap it inside separate function let's say `fun showDialog()`
 ```kotlin
