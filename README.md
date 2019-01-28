@@ -24,7 +24,7 @@ dependencies {
         for (i in 0 until cardSize) {
             dataList.add(CarouselData.Builder()
                     .setButtonActionName("OK") // optional. this will be the name of the button of each item. leave this blank then it will hide the button
-                    .setImageUrl( "https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg) // I'm using Glide to load image from url. 
+                    .setImageUrl( "https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg") // I'm using Glide to load image from url. 
                     .setDescription("Description $i") // this is the description placed under the image
                     .setPlaceHolderImageRes(R.drawable.ic_placeholder) // default image while loading the image
                     .setPlaceHolderErrorImageResId( R.drawable.ic_placeholder_error) // error image when downloading failed
