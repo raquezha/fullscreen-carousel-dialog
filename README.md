@@ -96,11 +96,11 @@ This project is using AndroidX on Android Studio 3.3
 Written in Kotlin 1.3.11
 
 
-## Thanks
-Thanks to [@yarolegovich]( https://github.com/yarolegovich )'s  [Discrete ScrollView]( https://github.com/yarolegovich/DiscreteScrollView ) Library 
+## Acknowledgement
+* Thanks to [@yarolegovich]( https://github.com/yarolegovich )'s  [Discrete ScrollView]( https://github.com/yarolegovich/DiscreteScrollView ) Library 
   
 
-Thanks to [@Mohammed Audhil]( https://android.jlelse.eu/@audhilmohammed )'s [Custom Alert Dialog Tutorial](  https://android.jlelse.eu/android-custom-alert-dialogs-kotlin-extension-functions-kotlin-higher-order-functions-life-682305c5322e )
+* Thanks to [@Mohammed Audhil]( https://android.jlelse.eu/@audhilmohammed )'s [Custom Alert Dialog Tutorial](  https://android.jlelse.eu/android-custom-alert-dialogs-kotlin-extension-functions-kotlin-higher-order-functions-life-682305c5322e )
 
 ## License
 ```
