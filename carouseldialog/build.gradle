@@ -9,6 +9,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 apply from: '../dependencies.gradle'
 
+
 publish {
 
     def groupProjectID = 'net.raquezha.carouseldialog'
@@ -32,7 +33,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0.0-rc2"
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
