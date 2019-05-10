@@ -13,7 +13,7 @@ publish {
 
     def groupProjectID = 'net.raquezha.carouseldialog'
     def artifactProjectID = 'carouseldialog'
-    def publishVersionID = '1.0.0-rc2'
+    def publishVersionID = '1.0.1'
 
     userOrg = 'raquezha'
     repoName = 'fullscreen-carousel-dialog'
@@ -51,16 +51,16 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     api "com.yarolegovich:discrete-scrollview:$discreted_scrollview_version"
-    implementation "androidx.appcompat:appcompat:$appcompat_version"
-    implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "androidx.core:core-ktx:$core_ktx_version"
-    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
-    implementation "androidx.cardview:cardview:$cardview_version"
-    implementation "com.github.bumptech.glide:glide:$glide_version"
-    implementation "com.github.bumptech.glide:annotations:$glide_annotation_version"
-    implementation "com.github.bumptech.glide:okhttp3-integration:$glide_okhttp_integration_version"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    api "androidx.appcompat:appcompat:$appcompat_version"
+    api "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    api "androidx.core:core-ktx:$core_ktx_version"
+    api "androidx.recyclerview:recyclerview:$recyclerview_version"
+    api "androidx.cardview:cardview:$cardview_version"
+    api "com.github.bumptech.glide:glide:$glide_version"
+    api "com.github.bumptech.glide:annotations:$glide_annotation_version"
+    api "com.github.bumptech.glide:okhttp3-integration:$glide_okhttp_integration_version"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test:runner:$runner_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
